@@ -345,8 +345,6 @@ class TestLambdaBehavior:
     )
     @markers.snapshot.skip_snapshot_verify(
         paths=[
-            # fixable by setting /tmp permissions to 700
-            "$..Payload.paths._tmp_mode",
             # requires creating a new user `slicer` and chown /var/task
             "$..Payload.paths._var_task_gid",
             "$..Payload.paths._var_task_owner",
@@ -376,8 +374,6 @@ class TestLambdaBehavior:
     )
     @markers.snapshot.skip_snapshot_verify(
         paths=[
-            # fixable by setting /tmp permissions to 700
-            "$..Payload.paths._tmp_mode",
             # requires creating a new user `slicer` and chown /var/task
             "$..Payload.paths._var_task_gid",
             "$..Payload.paths._var_task_owner",
